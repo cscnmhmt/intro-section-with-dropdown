@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu-item {
+  position: relative;
+}
+
+.nav-menu-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.ghost-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.bordered-btn {
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 3rem;
+  left: -1rem;
+  display: none;
+  border: 1px solid;
+  transition: 0.2s;
+  padding: 2rem;
+  z-index: 100;
+}
+
+.sub-menu li {
+  list-style: none;
+}
+
+.nav-menu-item:hover .sub-menu,
+.sub-menu:hover .sub-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  transition: 0.2s;
+}
+
+.nav-menu-item:hover .arrow {
+  transform: rotate(180deg);
+}

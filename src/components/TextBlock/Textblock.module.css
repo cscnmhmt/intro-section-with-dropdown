@@ -1,0 +1,12 @@
+.text-block {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
