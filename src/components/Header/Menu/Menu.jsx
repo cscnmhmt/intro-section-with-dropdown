@@ -1,5 +1,9 @@
 import React from "react";
 import ArrowDownIcon from "../../../assets/icon-arrow-down.svg";
+import TodoIcon from "../../../assets/icon-todo.svg";
+import IconCalendar from "../../../assets/icon-calendar.svg";
+import IconReminders from "../../../assets/icon-reminders.svg";
+import IconPlanning from "../../../assets/icon-planning.svg";
 import styles from "./Menu.module.css";
 
 const Menu = () => {
@@ -10,8 +14,10 @@ const Menu = () => {
       type: "link",
       isHovered: false,
       subMenu: [
-        { name: "item1", href: "#" },
-        { name: "item2", href: "#" },
+        { name: "Todo list", href: "#", icon: TodoIcon },
+        { name: "Calendar", href: "#", icon: IconCalendar },
+        { name: "Reminders", href: "#", icon: IconReminders },
+        { name: "Planning", href: "#", icon: IconPlanning },
       ],
     },
     {
@@ -20,8 +26,9 @@ const Menu = () => {
       type: "link",
       isHovered: false,
       subMenu: [
-        { name: "item1", href: "#" },
-        { name: "item2", href: "#" },
+        { name: "History", href: "#" },
+        { name: "Our Team", href: "#" },
+        { name: "Blog", href: "#" },
       ],
     },
     {
@@ -51,8 +58,8 @@ const Menu = () => {
     <nav className={styles.nav}>
       <div className={styles["nav-menu"]}>
         {menuItems.map((item) => (
-          <div className={styles["nav-menu-item"]} key={item.name}>
-            <a href={item.href}>
+          <div className={styles["nav-menu__item"]} key={item.name}>
+            <a href={item.href} className={styles["nav-menu__item___link"]}>
               {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               {item.hasOwnProperty("subMenu") ? (
                 <img
@@ -67,8 +74,15 @@ const Menu = () => {
             {item.hasOwnProperty("subMenu") && (
               <div className={styles["sub-menu"]}>
                 {item.subMenu.map((sub) => (
-                  <a href={sub.href} key={sub.name}>
-                    {sub.name}
+                  <a
+                    className={styles["sub-menu__link"]}
+                    href={sub.href}
+                    key={sub.name}
+                  >
+                    {sub.icon && <img src={sub.icon} alt="" />}
+                    <span>
+                      {sub.name.charAt(0).toUpperCase() + sub.name.slice(1)}
+                    </span>
                   </a>
                 ))}
               </div>
@@ -76,10 +90,10 @@ const Menu = () => {
           </div>
         ))}
       </div>
-      <div>
+      <div className={styles["btn-group"]}>
         {actionBtns.map((btn) => (
           <button key={btn.name} className={styles[`${btn.buttonType}`]}>
-            {btn.name}
+            {btn.name.charAt(0).toUpperCase() + btn.name.slice(1)}
           </button>
         ))}
       </div>

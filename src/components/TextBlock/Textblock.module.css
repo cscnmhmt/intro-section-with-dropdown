@@ -1,4 +1,5 @@
 .text-block {
+  margin-top: 4rem;
   width: 600px;
   display: flex;
   flex-direction: column;
@@ -7,6 +8,7 @@
 }
 
 .clients {
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }

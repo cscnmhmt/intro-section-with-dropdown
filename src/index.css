@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
 /*
     RESET CSS
   made by cscn ==> cscn.dev
@@ -42,6 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
   min-block-size: 100%;
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 
 :where(img, svg, video, canvas, audio, iframe, embed, object) {

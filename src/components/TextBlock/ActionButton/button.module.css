@@ -1,0 +1,19 @@
+.hero-btn {
+  width: 180px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fafafa;
+  border: 2px solid #141414;
+  border-radius: 10px;
+  background-color: #141414;
+}
+
+.hero-btn:hover {
+  background-color: transparent;
+  color: #141414;
+}
